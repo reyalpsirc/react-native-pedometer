@@ -1,7 +1,7 @@
-const RCTDeviceEventEmitter = require('RCTDeviceEventEmitter');
+import { DeviceEventEmitter, NativeModules } from 'react-native';
 var {
   MDPedometer
-} = require('NativeModules');
+} = NativeModules;
 
 var listener;
 
@@ -27,7 +27,7 @@ const Pedometer = {
 
   startPedometerUpdatesFromDate(date, handler) {
     MDPedometer.startPedometerUpdatesFromDate(date);
-    listener = RCTDeviceEventEmitter.addListener(
+    listener = DeviceEventEmitter.addListener(
       'pedometerDataDidUpdate',
       handler
     );
