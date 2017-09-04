@@ -3,10 +3,7 @@
   "version": "0.0.1",
   "main": "Pedometer.js",
   "nativePackage": true,
-  "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
-  },
-  "dependencies": {
+  "peerDependencies": {
     "react-native": "^0.11.2"
   },
   "repository": {
